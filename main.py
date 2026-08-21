@@ -98,7 +98,8 @@ class ParticleEmitter():
         
         
         try:
-            print(self.rects[0].timeleft)
+            #print(self.rects[0].timeleft)
+            pass
         except Exception as e:
             pass
         j = 0 
@@ -347,11 +348,11 @@ def initLevel(lvl):
     if selectedLevel==1:
         divisor=4
     
-    print(f"Level {lvl} init")
-    print(f"{px} {py}")
+    #print(f"Level {lvl} init")
+    #print(f"{px} {py}")
     cx = (-px+MW//divisor) * BS*zoom-2*BS*zoom
     cy = (-py+MH//divisor) * BS*zoom-2*BS*zoom
-    print(f"{cx} {cy}")
+    #print(f"{cx} {cy}")
     p.x = px
     p.y = py
     p.dx = 0
@@ -721,8 +722,8 @@ while True:
         
         if grid[p.y][p.x]==4:
             if p.done:
-                print(f"Coins: {coins}")
-                print(f"Stars: {stars}")
+                #print(f"Coins: {coins}")
+                #print(f"Stars: {stars}")
                 
                 level_stats[selectedLevel][2][0] = max(level_stats[selectedLevel][2][0],tStars)
                 level_stats[selectedLevel][1][0] = max(level_stats[selectedLevel][1][0],tCoins)

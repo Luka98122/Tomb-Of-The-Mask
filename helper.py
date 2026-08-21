@@ -10,7 +10,7 @@ MW,MH = 60,60
 zoom = 1
 
 
-f = open("maps\\1.json")
+f = open("maps/1.json")
 grid = json.loads(f.read())
 f.close()
 
@@ -44,14 +44,14 @@ endRect = pygame.Rect(BS*MW,MW/5*4*BS,BS*10,BS*MH/5)
 directionRect = pygame.Rect(0,BS*MH,BS*MW,BS*MW)
 clock = pygame.time.Clock()
 
-wallImg = pygame.image.load("cont\\wall1.png")
-squareImg = pygame.image.load("cont\\square.png")
+wallImg = pygame.image.load("cont/wall1.png")
+squareImg = pygame.image.load("cont/square.png")
 squareImg = pygame.transform.scale(squareImg,(BS,BS))
 wallImg = pygame.transform.scale(wallImg,(BS,BS))
 
-deathWallImg = pygame.image.load("cont\\deathwall.png")
+deathWallImg = pygame.image.load("cont/deathwall.png")
 deathWallImg = pygame.transform.scale(deathWallImg,(BS*0.5,BS))
-trapwallImg = pygame.image.load("cont\\trapwall.png")
+trapwallImg = pygame.image.load("cont/trapwall.png")
 trapwallImg = pygame.transform.scale(trapwallImg,(BS,BS))
 
 
@@ -71,7 +71,7 @@ while True:
     events = pygame.event.get()
     for event in events:
         if event.type==pygame.QUIT:
-            f = open("maps\\"+koja,"w")
+            f = open("maps/"+koja,"w")
             f.write(json.dumps(grid))
             f.close()
             exit()
